@@ -3,8 +3,9 @@ import java.util.Objects;
 
 public class FactorialOfN_Problem {
     public static void main(String[] args) {
-        System.out.println(factorialOfN(2000));
-        System.out.println(trailingZerosInFactorial(65));
+//        System.out.println(factorialOfN(2000));
+        System.out.println(Math.log10(11));
+//        System.out.println(trailingZerosInFactorial(65));
     }
 //    static long factorialOfN(int n){//Using Recursive   for return type int 0<n<17 and for long : 0<n<21, TC : O(n) , SC : O(n)
 //        if (n==1) return 1;
@@ -36,6 +37,20 @@ public class FactorialOfN_Problem {
             res += num/i;
         }
         return res;
+    }
+    static int digitsInFactorial(int n){
+        // code here
+        if (n == 0 || n == 1) {
+            return 1; // Factorials of 0 and 1 have 1 digit
+        }
+
+        double digits = 0;
+        for (int i = 2; i <= n; i++) {
+            digits += Math.log10(i);
+        }
+
+        // Add 1 to account for the integer part of the logarithm
+        return (int) Math.floor(digits) + 1;
     }
 
 
