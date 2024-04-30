@@ -6,7 +6,7 @@ public class UnderModuloProblems {
         // code here
         long modulo = 1000000007;
 
-        // Calculate the sum of a and b modulo modulo
+        // Calculate the sum of a and b modulo
 
         return (a % modulo + b % modulo) % modulo;
     }
